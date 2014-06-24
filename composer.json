@@ -16,5 +16,10 @@
             "FullFame\\Folio": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev",
+        "fzaninotto/faker": "1.4.*@dev",
+        "mikey179/vfsStream": "dev-master"
+    }
 }
