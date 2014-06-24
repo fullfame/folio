@@ -1,0 +1,20 @@
+{
+    "name": "fullfame/folio",
+    "description": "A file base page persistance package. Stores a webpages in a .page format; which is just a directory that contains it's meta-data, properties, content and even a custom controller.",
+    "authors": [
+        {
+            "name": "Jonas De Swaef",
+            "email": "jonas@fullfame.ne"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "FullFame\\Folio": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
