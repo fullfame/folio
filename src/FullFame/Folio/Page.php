@@ -16,13 +16,13 @@ class Page {
     private $properties = [];
 
     private $paths = [
-        'properties'    => '/meta/info.json',
-        'html_meta'     => '/meta/html.json',
-        'facebook'      => '/meta/facebook.json'
+        'properties'    => 'meta/info.json',
+        'html_meta'     => 'meta/html.json',
+        'facebook'      => 'meta/facebook.json'
     ];
 
     private $property_defaults = [
-        'controller'    => 'PageController'
+        'controller'    => 'FullFame\Folio\PageController'
     ];
 
     public function __construct(\DirectoryIterator $page_dir)
@@ -64,7 +64,7 @@ class Page {
     private function registerPaths(\DirectoryIterator $page)
     {
         foreach ($this->paths as &$path) {
-            $path = $page->getPathname().$path;
+            $path = $page->getPathname().'/'.$path;
         }
         $this->page_location = $page->getPathname();
     }
@@ -102,6 +102,7 @@ class Page {
     {
         return $this->name;
     }
+
 
     /*
         |--------------------------------------------------------------------------

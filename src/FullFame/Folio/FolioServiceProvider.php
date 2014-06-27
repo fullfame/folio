@@ -1,5 +1,6 @@
 <?php namespace FullFame\Folio;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class FolioServiceProvider extends ServiceProvider {
@@ -34,7 +35,11 @@ class FolioServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->package('fullfame/folio');
-        include __DIR__.'/routes.php';
+        /* @var $pageRouter FullFame\Folio\PageRouter */
+        $pageRouter = \App::make('FullFame\Folio\PageRouter');
+        $pageRouter->registerPageRoutes();
+
+
     }
 
 }
